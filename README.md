@@ -9,6 +9,7 @@
 * **Native Desktop Integration**: Automatically generates `.desktop` files in your local applications folder.
 * **Icon Browser & Management**: Features a built-in icon browser with search functionality to help you find and change the icon for desired MIME types that shows in file managers.
 * **MIME Type Association**: Link specific file extensions to your AppImages so they appear in "Open With" menus.
+* **Desktop file editor**: Existing .desktop files can be edited, useful for Wine apps.
 * **MIME Finder Tool**: Includes a dedicated drag-and-drop utility to identify file types using the system's `QMimeDatabase`.
 * **Clean Uninstall**: Safely removes desktop files and associated icons while restoring original MIME associations.
 
@@ -36,13 +37,10 @@ Ensure you have Python 3.10+ installed on your Linux system.
 
 ## 📖 How to Use
 
-1. **Integrate a New App**
+**Integrate a New App**
 
 * Launch the application and select "Create desktop file".
 * Browse for your AppImage file.
-
 * The tool will automatically parse the AppImage for metadata.
-
 * Adjust the Name, Icon, and MIME Types in the dynamic form.
-
 * Click Apply.
