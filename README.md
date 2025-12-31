@@ -29,7 +29,7 @@
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/silo0074/AppImageIntegrator.git
-   cd appimage-integrator
+   cd AppImageIntegrator
 
 2. **Create a virtual environment**:
    ```bash
