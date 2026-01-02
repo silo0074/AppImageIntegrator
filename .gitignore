@@ -80,3 +80,22 @@ CMakeLists.txt.user*
 .rcc/
 .uic/
 /build*/
+
+# qtcreator pyproject files
+*.pyproject.toml.user*
+.qtcreator/
+
+# Python / PySide6 specific
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+env/
+venv/
+.pytest_cache/
+.vscode/
+
+# AppImage Build Artifacts
+AppDir/
+*.AppImage
