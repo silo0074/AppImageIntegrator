@@ -31,6 +31,10 @@ jobs:
           chmod +x build_appimage.sh
           ./build_appimage.sh
 
+      - name: Generate Checksum
+        run: |
+        sha256sum AppImageIntegrator-x86_64.AppImage > AppImageIntegrator-x86_64.AppImage.sha256
+
       - name: Create Release
         uses: softprops/action-gh-release@v2
         with:
