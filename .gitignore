@@ -9,7 +9,9 @@ venv/
 AppDir/
 *.AppImage
 *.AppImage.digest
+*.spec
 build/
+build_tools/
 dist/
 
 # Qt / Project specific
