@@ -5,6 +5,9 @@ on:
     tags:
       - 'v*' # Trigger only when you push a tag starting with 'v' (e.g., v1.0.1)
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest # Using Ubuntu runner as it's the standard for builds
