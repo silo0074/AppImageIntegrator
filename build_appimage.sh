@@ -26,7 +26,17 @@ fi
 
 python3 -m venv venv
 source venv/bin/activate
-pip install PySide6 pyinstaller
+
+# Use requirements.txt instead of manual pip install
+if [ -f requirements.txt ]; then
+    echo "Installing dependencies from requirements.txt..."
+    pip install --upgrade pip
+    pip install -r requirements.txt
+    pip install pyinstaller  # Ensure pyinstaller is available in venv
+else
+    echo "requirements.txt not found! Falling back to manual install..."
+    pip install PySide6 pyinstaller
+fi
 
 # PyInstaller Build
 # Creates the bundled folder in dist/AppImageIntegrator/
