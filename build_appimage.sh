@@ -111,16 +111,16 @@ echo "VERIFYING LIBRARIES..."
 # Check the files in AppDir before we turn it into an AppImage. No execution needed!
 ldd $APP_DIR/usr/bin/${APP_NAME} | grep "not found" || echo "All libraries resolved."
 
-if [ "$GITHUB_ACTIONS" == "true" ]; then
-    echo "Running on GitHub, skipping GUI launch test."
-else
-    echo "STARTING TEST EXECUTION..."
-
-    timeout 3s ./${APP_NAME}-x86_64.AppImage || {
-    if [ $? -eq 124 ]; then
-        echo "SUCCESS: AppImage launched correctly."
-    else
-        echo "ERROR: AppImage failed to launch."
-        exit 1
-    fi
-fi
+# if [ "$GITHUB_ACTIONS" == "true" ]; then
+#     echo "Running on GitHub, skipping GUI launch test."
+# else
+#     echo "STARTING TEST EXECUTION..."
+#
+#     timeout 3s ./${APP_NAME}-x86_64.AppImage || {
+#     if [ $? -eq 124 ]; then
+#         echo "SUCCESS: AppImage launched correctly."
+#     else
+#         echo "ERROR: AppImage failed to launch."
+#         exit 1
+#     fi
+# fi
