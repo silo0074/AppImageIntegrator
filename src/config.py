@@ -61,7 +61,7 @@ Games               Play;Entertainment;Simulation;Action;Arcade;Steam;
 
 class AppConfig:
     APP_NAME = "AppImageIntegrator"
-    APP_VERSION = "1.0.1"
+    APP_VERSION = "1.0.2"
 
 class PathConfig:
     APP_ICON_PATH = "icons/AppImageIntegrator.png"
