@@ -3,7 +3,7 @@ set -e
 
 # Constants
 APP_NAME="AppImageIntegrator"
-APP_ICON="src/icons/AppIntegrator.png"
+APP_ICON="src/icons/AppImageIntegrator.png"
 APP_DESKTOP="AppImageIntegrator.desktop"
 APP_DIR="AppDir"
 export VERSION="1.0"

@@ -64,6 +64,7 @@ class AppConfig:
     APP_VERSION = "1.0.0"
 
 class PathConfig:
+    APP_ICON_PATH = "icons/AppImageIntegrator.png"
     ICONS_DIR = Path.home() / ".local/share/icons/"
     DESKTOP_FILE_DIR = Path.home() / ".local/share/applications"
 

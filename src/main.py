@@ -68,7 +68,7 @@ class AboutDialog(QDialog):
         # App Icon
         self.icon_label = QLabel()
         # Path to your icon file
-        icon_path = get_resource_path("icons/AppIntegrator.png")
+        icon_path = get_resource_path(config.PathConfig.APP_ICON_PATH)
         pixmap = QPixmap(icon_path)
         self.icon_label.setPixmap(pixmap.scaled(64, 64, Qt.KeepAspectRatio, Qt.SmoothTransformation))
         header_layout.addWidget(self.icon_label)
@@ -84,7 +84,7 @@ class AboutDialog(QDialog):
         # --- Description Area ---
         self.label = QLabel()
         self.label.setTextFormat(Qt.RichText)
-        self.label.setOpenExternalLinks(True)
+        self.label.setOpenExternalLinks(False)
         self.label.setWordWrap(True)
         self.label.setText("""
             <div style='text-align: left;'>
@@ -96,10 +96,11 @@ class AboutDialog(QDialog):
                 Support me: <a href='https://buymeacoffee.com/liviuistrate'>buymeacoffee.com/liviuistrate</a>
                 </p>
                 <hr>
-                <p>Check for updates on <a href='https://github.com/yourprofile/repo'>GitHub</a></p>
+                <p>Check for updates on <a href='https://github.com/silo0074/AppImageIntegrator'>GitHub</a></p>
             </div>
         """)
         layout.addWidget(self.label)
+        self.label.linkActivated.connect(self.open_link_safely)
 
         # --- Bottom Buttons ---
         button_layout = QHBoxLayout()
@@ -117,6 +118,23 @@ class AboutDialog(QDialog):
         button_layout.addWidget(self.buttons)
 
         layout.addLayout(button_layout)
+
+    def open_link_safely(self, url):
+        """Opens a link while clearing LD_LIBRARY_PATH to avoid AppImage library conflicts."""
+        # Create a copy of the current environment
+        new_env = os.environ.copy()
+
+        # List of variables to clear that often cause AppImage -> System conflicts
+        vars_to_clear = ["LD_LIBRARY_PATH", "QT_PLUGIN_PATH", "LD_PRELOAD"]
+
+        for var in vars_to_clear:
+            new_env.pop(var, None)
+
+        try:
+            # Use xdg-open to launch the system default browser
+            subprocess.Popen(["xdg-open", url], env=new_env)
+        except Exception as e:
+            print(f"Failed to open link: {e}")
 
 
 # ------------------------------------------------------------------
@@ -195,8 +213,8 @@ class Integrator(QMainWindow):
         self.ui = Ui_Integrator()
         self.ui.setupUi(self)
 
-        icon_path = get_resource_path("icons/AppIntegrator.png")
-        # icon_path = os.path.join(os.getcwd(), "icons/AppIntegrator.png")
+        icon_path = get_resource_path(config.PathConfig.APP_ICON_PATH)
+        # icon_path = os.path.join(os.getcwd(), config.PathConfig.APP_ICON_PATH)
         self.setWindowIcon(QIcon(icon_path))
         create_desktop_icon()
 
@@ -208,7 +226,7 @@ class Integrator(QMainWindow):
         self.mime_list_2 = {}
 
         # ------------ Settings
-        # Initialize QSettings (This points to ~/.config/AppIntegrator/settings.conf)
+        # Initialize QSettings (This points to ~/.config/AppImageIntegrator/settings.conf)
         self.settings = QSettings(config.AppConfig.APP_NAME , "settings")
 
         # Load the previous state

@@ -100,10 +100,10 @@ class AppImageParser(QThread):
     finished = Signal(str, list)
     error = Signal(str)
 
-    def __init__(self, appimage_path, destination_folder):
+    def __init__(self, appimage_path, icon_destination_folder):
         super().__init__()
         self.appimage_path = os.path.abspath(appimage_path)
-        self.destination_folder = os.path.abspath(destination_folder)
+        self.icon_destination_folder = os.path.abspath(icon_destination_folder)
         # Force the extraction directory to be an absolute path near the AppImage
         # self.extract_dir = os.path.join(os.path.dirname(self.appimage_path), "squashfs-root")
         self.temp_dir = tempfile.mkdtemp()
@@ -167,16 +167,20 @@ class AppImageParser(QThread):
     def get_appimage_icon(self):
         base_name = os.path.splitext(os.path.basename(self.appimage_path))[0].lower()
         search_key = re.split(r'[\s\-]', base_name)[0]
-        valid_exts = ('.svg', '.png', '.ico')
+        valid_exts = ('.svg', '.png', '.ico', '.xpm')
+
+        # Ensure destination exists
+        os.makedirs(self.icon_destination_folder, exist_ok=True)
 
         for filename in os.listdir(self.extract_dir):
             if filename.lower().endswith(valid_exts) and search_key in filename.lower():
                 src = os.path.join(self.extract_dir, filename)
-                dst = os.path.join(self.destination_folder, filename)
-                os.makedirs(self.destination_folder, exist_ok=True)
+                dst = os.path.join(self.icon_destination_folder, filename)
+                os.makedirs(self.icon_destination_folder, exist_ok=True)
                 shutil.copy2(src, dst)
                 return dst
         return None
+
 
     def get_appimage_desktop(self):
         entries = []  # Use a list to hold tuples
