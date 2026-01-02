@@ -44,7 +44,7 @@ from CustomWidgets import MimeGroupWidget, FlowLayout
 from Logic import (
     DesktopFileHandler, AppImageParser, MimeWorker,
     InteractiveHelp, IconThumbnail,
-    get_resource_path, create_desktop_icon,
+    get_resource_path,
 )
 import config
 import stylesheet
@@ -216,7 +216,6 @@ class Integrator(QMainWindow):
         icon_path = get_resource_path(config.PathConfig.APP_ICON_PATH)
         # icon_path = os.path.join(os.getcwd(), config.PathConfig.APP_ICON_PATH)
         self.setWindowIcon(QIcon(icon_path))
-        create_desktop_icon()
 
         # Variables
         self.action = "Menu"
