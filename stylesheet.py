@@ -5,11 +5,10 @@
 
 from Logic import get_resource_path
 
-# 1. Get the absolute path to the image inside the AppImage
+# Get the absolute path to the image inside the AppImage
 bg_image_path = get_resource_path("images/background_lite.png")
 
-# Use {{ and }} for the CSS blocks so Python treats them as text.
-# Keep single {bg_image_path} for the variable you actually want to inject.
+# Using {{ and }} for the CSS blocks so Python treats them as text.
 global_style = f"""
     QWidget {{
         font-size: 11pt;

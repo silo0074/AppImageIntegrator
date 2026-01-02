@@ -1,2 +1,6 @@
+<<<<<<< HEAD
 PySide6==6.*
 PySide6-Essentials==6.*
+=======
+PySide6
+>>>>>>> effec655f5ef832f22f35b9e0c00a8d500fa6fd1

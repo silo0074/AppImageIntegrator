@@ -25,6 +25,7 @@ from PySide6.QtGui import (
     QPixmap,
     # QFontMetrics
 )
+
 import config
 
 
@@ -337,6 +338,7 @@ class IconThumbnail(QFrame):
         # When clicked, set the parent input field to this icon's path/name
         self.parent_input.setText(self.icon_path)
         self.setStyleSheet("background-color: #3daee9;")
+
         # Check if the attribute exists AND is not None
         prev = getattr(self.parent_input, 'previous_element', None)
         if prev is not None:
@@ -346,7 +348,6 @@ class IconThumbnail(QFrame):
                 # This handles cases where the previous widget was deleted by C++
                 pass
         self.parent_input.previous_element = self
-
 
 
 # ----------------------------------------------------------------------
