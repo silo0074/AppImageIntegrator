@@ -1,12 +1,24 @@
 #!/bin/bash
 set -e
 
+# Path to config file
+CONFIG_FILE="src/config.py"
+
+# Extract the version string
+# This looks for the line starting with APP_VERSION,
+# then uses sed to grab only the text inside the quotes.
+export VERSION=$(grep "APP_VERSION =" "$CONFIG_FILE" | sed -E 's/.*"([^"]+)".*/\1/')
+
+echo "------------------------------------------------"
+echo "BUILDING VERSION: $VERSION"
+echo "------------------------------------------------"
+
 # Constants
 APP_NAME="AppImageIntegrator"
 APP_ICON="src/icons/AppImageIntegrator.png"
 APP_DESKTOP="AppImageIntegrator.desktop"
 APP_DIR="AppDir"
-export VERSION="1.0"
+export VERSION=$VERSION
 
 # Define tools directory
 TOOLS_DIR="build_tools"
