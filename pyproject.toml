@@ -1,0 +1,5 @@
+[project]
+name = "AppIntegrator"
+
+[tool.pyside6-project]
+files = ["CustomWidgets.py", "Logic.py", "config.py", "form.ui", "main.py", "stylesheet.py", "ui_form.py"]
