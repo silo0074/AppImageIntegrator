@@ -40,4 +40,4 @@ jobs:
 
       - name: Generate Checksum
         run: |
-        sha256sum AppImageIntegrator-x86_64.AppImage > AppImageIntegrator-x86_64.AppImage.sha256
+        sha256sum AppImageIntegrator-x86_64.AppImage | AppImageIntegrator-x86_64.AppImage.sha256
