@@ -379,7 +379,7 @@ class Ui_Integrator(object):
         self.iconsBrowser.setWidgetResizable(True)
         self.scrollAreaWidgetContents_2 = QWidget()
         self.scrollAreaWidgetContents_2.setObjectName(u"scrollAreaWidgetContents_2")
-        self.scrollAreaWidgetContents_2.setGeometry(QRect(0, 0, 679, 433))
+        self.scrollAreaWidgetContents_2.setGeometry(QRect(0, 0, 100, 30))
         self.iconsBrowser.setWidget(self.scrollAreaWidgetContents_2)
         self.splitter.addWidget(self.iconsBrowser)
         self.mimeTypes = QScrollArea(self.splitter)
@@ -392,7 +392,7 @@ class Ui_Integrator(object):
         self.mimeTypes.setWidgetResizable(True)
         self.scrollAreaWidgetContents_4 = QWidget()
         self.scrollAreaWidgetContents_4.setObjectName(u"scrollAreaWidgetContents_4")
-        self.scrollAreaWidgetContents_4.setGeometry(QRect(0, 0, 679, 16))
+        self.scrollAreaWidgetContents_4.setGeometry(QRect(0, 0, 100, 16))
         sizePolicy5 = QSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Maximum)
         sizePolicy5.setHorizontalStretch(0)
         sizePolicy5.setVerticalStretch(0)
@@ -497,7 +497,7 @@ class Ui_Integrator(object):
 
         self.retranslateUi(Integrator)
 
-        self.stackedWidget.setCurrentIndex(1)
+        self.stackedWidget.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(Integrator)

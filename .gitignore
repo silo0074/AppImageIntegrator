@@ -17,3 +17,6 @@ dist/
 # Qt / Project specific
 *.user
 .qtcreator/
+
+# VSCode
+.vscode/
