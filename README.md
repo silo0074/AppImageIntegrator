@@ -2,7 +2,7 @@
 ![Qt Version](https://img.shields.io/badge/Qt-6.x-green?logo=qt)
 ![PySide6](https://img.shields.io/badge/Framework-PySide6-blue?logo=qt)
 ![Release](https://img.shields.io/github/v/release/silo0074/AppImageIntegrator)
-![Build Status](https://github.com/silo0074/AppImageIntegrator/actions/workflows/build-appimage.yml/badge.svg?branch=main)
+![Build Status](https://github.com/silo0074/AppImageIntegrator/actions/workflows/build-appimage.yml/badge.svg)
 
 # AppImage Integrator
 
