@@ -81,6 +81,14 @@ If you prefer to build the AppImage yourself, you can use the provided automatio
 
 <br>
 
+## How does it work
+
+The user can select an AppImage which will be temporarly unpacked to extract the icon and the desktop file. The icon will be copied in `.local/share/icons/` and a .desktop file will be created in `.local/share/applications`. The user can modify the desktop fields such as the application name or pick another icon. The MIME types can be selected using a list of check boxes. These tells the system what file types the application can handle so it can appear in the Open With menu.
+
+Based on the settings inside the Options section, a desktop file can be created, the installed app can be set as default, the app icon can be used for selected MIME types to appear in the KDE file manager instead of the default ones. 
+
+<br>
+
 ## 🛠️ Built With
 
 * **[Python 3.10+](https://www.python.org/)** - The core programming language.
