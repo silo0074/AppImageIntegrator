@@ -22,6 +22,23 @@
 
 <br>
 
+## 📸 Screenshots
+
+| Main Interface | App Install |
+| :---: | :---: |
+| ![Main UI](./assets/AppIntegrator_screenshoot_01_Menu.png) | ![Create .desktop](./assets/AppIntegrator_screenshoot_02_Create.png) |
+
+<br>
+
+<details>
+  <summary>🔍 Click to view more screenshots</summary>
+  
+  ![Set MIME icon](./assets/AppIntegrator_screenshoot_03_Mime_Icon.png)
+  ![About page](./assets/AppIntegrator_screenshoot_04_About.png)
+</details>
+
+<br>
+
 ## 💡 Usage
 
 After downloading the AppImage, right-click it and under **Properties -> Permissions**, check the **Execute** right. You can integrate the app itself the same way you would with other AppImages.
