@@ -43,3 +43,29 @@ jobs:
             AppImageIntegrator-x86_64.AppImage.sha256
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  update-changelog:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          # Check out 'main' so we can push the updated file back to it
+          ref: main 
+          fetch-depth: 0 # Necessary to see all tags for the generator
+
+      - name: Generate Changelog
+        uses: heinrichreimer/github-changelog-generator-action@v2.1.1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          # Recommended options for a clean output
+          issues: true
+          pullRequests: true
+          prWoLabels: true
+          author: true
+
+      - name: Commit and Push
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "docs(changelog): update CHANGELOG.md for ${{ github.ref_name }} [skip ci]"
+          file_pattern: "CHANGELOG.md"
