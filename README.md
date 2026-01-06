@@ -24,6 +24,23 @@
 
 <br>
 
+| Menu Screen | Install AppImage |
+| :---: | :---: |
+| ![Menu](./assets/AppIntegrator_screenshoot_01_Menu.png) | ![Create](./assets/AppIntegrator_screenshoot_02_Create.png) |
+
+<details>
+<summary><b>Click to see more screenshots</b></summary>
+
+#### Mime Icon
+![Mime Icon](./assets/AppIntegrator_screenshoot_03_Mime_Icon.png)
+
+#### About Screen
+![About](./assets/AppIntegrator_screenshoot_04_About.png)
+
+</details>
+
+<br>
+
 ## 💡 Usage
 
 After downloading the AppImage, right-click it and under **Properties -> Permissions**, check the **Execute** right. You can integrate the app itself the same way you would with other AppImages.
@@ -35,7 +52,6 @@ After downloading the AppImage, right-click it and under **Properties -> Permiss
 ## 📥 Download
 
 The application binary can be downloaded as an AppImage from the [Releases](https://codeberg.org/silo0074/AppImageIntegrator/releases) section.
-The AppImage is automatically built by GitHub Actions using this workflow: [.github/workflows/build-appimage.yml](./.github/workflows/build-appimage.yml).
 
 <br>
 
