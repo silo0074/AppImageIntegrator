@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=AppImage Integrator
+Type=Application
+Exec=AppImageIntegrator
+Icon=AppImageIntegrator
+Categories=Utility;
+StartupWMClass=AppImageIntegrator-x86_64.AppImage
+Terminal=false
+MimeType=application/x-desktop;text/plain;application/vnd.appimage;
+Comment=Manage your AppImages and edit existing desktop files

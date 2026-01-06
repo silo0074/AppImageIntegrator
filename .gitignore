@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+
+# AppImage / LinuxDeploy artifacts
+AppDir/
+*.AppImage
+*.AppImage.digest
+*.spec
+build/
+build_tools/
+dist/
+
+# Qt / Project specific
+*.user
+.qtcreator/
+
+# VSCode
+.vscode/
