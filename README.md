@@ -39,7 +39,7 @@
 
 </details>
 
-<br>
+
 
 ## 💡 Usage
 
@@ -47,16 +47,18 @@ After downloading the AppImage, right-click it and under **Properties -> Permiss
 > [!TIP]
 > To easily find your AppImage apps, I recommend placing them under `/home/youruser/Apps`.
 
-<br>
+
 
 ## 📥 Download
 
 The application binary can be downloaded as an AppImage from the [Releases](https://codeberg.org/silo0074/AppImageIntegrator/releases) section.
+
 To verify the integrity of the download, run:
+
 ```bash
 sha256sum -c AppImageIntegrator-x86_64.AppImage.sha256
+```
 
-<br>
 
 ## 🔨 Compiling
 
@@ -66,12 +68,14 @@ If you prefer to build the AppImage yourself, you can use the provided automatio
    ```bash
    git clone https://codeberg.org/silo0074/AppImageIntegrator.git
    cd AppImageIntegrator
+   ```
 
 2. **Run the script**:
    ```bash
    ./build_appimage.sh
+   ```
 
-<br>
+
 
 ## 📖 How to Use
 
