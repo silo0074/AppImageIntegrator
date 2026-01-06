@@ -1,7 +1,9 @@
-![Python Version](https://img.shields.io/badge/python-3.10%2B-blue?logo=python)
-![Qt Version](https://img.shields.io/badge/Qt-6.x-green?logo=qt)
-![PySide6](https://img.shields.io/badge/Framework-PySide6-blue?logo=qt)
-![Release](https://img.shields.io/github/v/release/silo0074/AppImageIntegrator)
+![Python Version](https://img.shields.io/badge/python-3.10%2B-blue?logo=python&logoColor=white)
+![Qt Version](https://img.shields.io/badge/Qt-6.x-41CD52?logo=qt&logoColor=white)
+![PySide6](https://img.shields.io/badge/Framework-PySide6-blue?logo=qt&logoColor=white)
+[![Hosted on Codeberg](https://img.shields.io/badge/Hosted_on-Codeberg-7091AD?logo=codeberg&logoColor=white)](https://codeberg.org/silo0074/AppImageIntegrator)
+[![License](https://img.shields.io/codeberg/l/silo0074/AppImageIntegrator)](https://codeberg.org/silo0074/AppImageIntegrator/src/branch/main/LICENSE)
+![Release](https://img.shields.io/codeberg/release/silo0074/AppImageIntegrator)
 
 # AppImage Integrator
 
@@ -32,7 +34,7 @@ After downloading the AppImage, right-click it and under **Properties -> Permiss
 
 ## 📥 Download
 
-The application binary can be downloaded as an AppImage from the [Releases](https://github.com/silo0074/AppImageIntegrator/releases) section.
+The application binary can be downloaded as an AppImage from the [Releases](https://codeberg.org/silo0074/AppImageIntegrator/releases) section.
 The AppImage is automatically built by GitHub Actions using this workflow: [.github/workflows/build-appimage.yml](./.github/workflows/build-appimage.yml).
 
 <br>
@@ -43,7 +45,7 @@ If you prefer to build the AppImage yourself, you can use the provided automatio
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/silo0074/AppImageIntegrator.git
+   git clone https://codeberg.org/silo0074/AppImageIntegrator.git
    cd AppImageIntegrator
 
 2. **Run the script**:
