@@ -2,8 +2,8 @@
 ![Qt Version](https://img.shields.io/badge/Qt-6.x-41CD52?logo=qt&logoColor=white)
 ![PySide6](https://img.shields.io/badge/Framework-PySide6-blue?logo=qt&logoColor=white)
 [![Hosted on Codeberg](https://img.shields.io/badge/Hosted_on-Codeberg-7091AD?logo=codeberg&logoColor=white)](https://codeberg.org/silo0074/AppImageIntegrator)
-[![License](https://img.shields.io/gitea/license/silo0074/AppImageIntegrator?gitea_url=https://codeberg.org)](https://codeberg.org/silo0074/AppImageIntegrator/src/branch/main/LICENSE)
-![Release](https://img.shields.io/codeberg/release/silo0074/AppImageIntegrator)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](./LICENSE)
+[![Release](https://img.shields.io/gitea/v/release/silo0074/AppImageIntegrator?gitea_url=https://codeberg.org)](https://codeberg.org/silo0074/AppImageIntegrator/releases)
 
 # AppImage Integrator
 
