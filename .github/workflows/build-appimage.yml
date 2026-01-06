@@ -15,6 +15,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -33,13 +35,15 @@ jobs:
 
       - name: Generate Checksum
         run: |
-          sha256sum AppImageIntegrator-x86_64.AppImage > AppImageIntegrator-x86_64.AppImage.sha256
+          # Ensure the filename matches what your script actually produces
+          sha256sum *.AppImage > checksums.txt
 
-      - name: Create Release
-        uses: softprops/action-gh-release@v2
+      - name: Create Release and Upload
+        uses: https://code.forgejo.org/forgejo/release-action@v1
         with:
+          token: ${{ secrets.GITHUB_TOKEN }}
           files: |
-            AppImageIntegrator-x86_64.AppImage
-            AppImageIntegrator-x86_64.AppImage.sha256
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            *.AppImage
+            checksums.txt
+          draft: false
+          prerelease: false
