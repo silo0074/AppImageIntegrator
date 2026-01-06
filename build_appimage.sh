@@ -104,12 +104,22 @@ export EXTRA_QT_PLUGINS="platforms;styles"
     $APP_DIR \
     ${APP_NAME}-x86_64.AppImage
 
+# Generate Checksum
+echo "GENERATING CHECKSUM..."
+sha256sum "${APP_NAME}-x86_64.AppImage" > "${APP_NAME}-x86_64.AppImage.sha256"
+echo "Checksum created: ${APP_NAME}-x86_64.AppImage.sha256"
 
 # Post-Build Verification
 echo "VERIFYING LIBRARIES..."
 
 # Check the files in AppDir before we turn it into an AppImage. No execution needed!
 ldd $APP_DIR/usr/bin/${APP_NAME} | grep "not found" || echo "All libraries resolved."
+
+echo "------------------------------------------------"
+echo "BUILD COMPLETE"
+echo "AppImage: ${APP_NAME}-x86_64.AppImage"
+echo "SHA256:   $(cat ${APP_NAME}-x86_64.AppImage.sha256)"
+echo "------------------------------------------------"
 
 # if [ "$GITHUB_ACTIONS" == "true" ]; then
 #     echo "Running on GitHub, skipping GUI launch test."

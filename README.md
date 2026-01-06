@@ -52,6 +52,9 @@ After downloading the AppImage, right-click it and under **Properties -> Permiss
 ## 📥 Download
 
 The application binary can be downloaded as an AppImage from the [Releases](https://codeberg.org/silo0074/AppImageIntegrator/releases) section.
+To verify the integrity of the download, run:
+```bash
+sha256sum -c AppImageIntegrator-x86_64.AppImage.sha256
 
 <br>
 
