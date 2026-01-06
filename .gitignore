@@ -13,6 +13,7 @@ AppDir/
 build/
 build_tools/
 dist/
+*.sha256
 
 # Qt / Project specific
 *.user

@@ -59,6 +59,11 @@ To verify the integrity of the download, run:
 sha256sum -c AppImageIntegrator-x86_64.AppImage.sha256
 ```
 
+Make it executable:
+```bash
+chmod +x AppImageIntegrator-x86_64.AppImage
+```
+
 
 ## 🔨 Compiling
 
