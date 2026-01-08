@@ -10,11 +10,20 @@ permissions:
 
 jobs:
   build:
+<<<<<<< HEAD
     runs-on: ubuntu-latest
+=======
+    runs-on: docker
+>>>>>>> main-codeberg
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+<<<<<<< HEAD
+=======
+        with:
+          fetch-depth: 0
+>>>>>>> main-codeberg
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -33,6 +42,7 @@ jobs:
 
       - name: Generate Checksum
         run: |
+<<<<<<< HEAD
           sha256sum AppImageIntegrator-x86_64.AppImage > AppImageIntegrator-x86_64.AppImage.sha256
 
       - name: Create Release
@@ -69,3 +79,17 @@ jobs:
         with:
           commit_message: "docs(changelog): update CHANGELOG.md for ${{ github.ref_name }} [skip ci]"
           file_pattern: "CHANGELOG.md"
+=======
+          # Ensure the filename matches what your script actually produces
+          sha256sum *.AppImage > checksums.txt
+
+      - name: Create Release and Upload
+        uses: https://code.forgejo.org/forgejo/release-action@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          files: |
+            *.AppImage
+            checksums.txt
+          draft: false
+          prerelease: false
+>>>>>>> main-codeberg

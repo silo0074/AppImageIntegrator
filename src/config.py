@@ -61,7 +61,11 @@ Games               Play;Entertainment;Simulation;Action;Arcade;Steam;
 
 class AppConfig:
     APP_NAME = "AppImageIntegrator"
+<<<<<<< HEAD
     APP_VERSION = "1.0.1"
+=======
+    APP_VERSION = "1.0.0"
+>>>>>>> main-codeberg
 
 class PathConfig:
     APP_ICON_PATH = "icons/AppImageIntegrator.png"

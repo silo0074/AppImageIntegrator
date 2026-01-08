@@ -1,7 +1,16 @@
+<<<<<<< HEAD
 ![Python Version](https://img.shields.io/badge/python-3.10%2B-blue?logo=python)
 ![Qt Version](https://img.shields.io/badge/Qt-6.x-green?logo=qt)
 ![PySide6](https://img.shields.io/badge/Framework-PySide6-blue?logo=qt)
 ![Release](https://img.shields.io/github/v/release/silo0074/AppImageIntegrator)
+=======
+![Python Version](https://img.shields.io/badge/python-3.10%2B-blue?logo=python&logoColor=white)
+![Qt Version](https://img.shields.io/badge/Qt-6.x-41CD52?logo=qt&logoColor=white)
+![PySide6](https://img.shields.io/badge/Framework-PySide6-blue?logo=qt&logoColor=white)
+[![Hosted on Codeberg](https://img.shields.io/badge/Hosted_on-Codeberg-7091AD?logo=codeberg&logoColor=white)](https://codeberg.org/silo0074/AppImageIntegrator)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](./LICENSE)
+[![Release](https://img.shields.io/gitea/v/release/silo0074/AppImageIntegrator?gitea_url=https://codeberg.org)](https://codeberg.org/silo0074/AppImageIntegrator/releases)
+>>>>>>> main-codeberg
 
 # AppImage Integrator
 
@@ -22,6 +31,7 @@
 
 <br>
 
+<<<<<<< HEAD
 ## 📸 Screenshots
 
 | Main Interface | App Install |
@@ -38,6 +48,24 @@
 </details>
 
 <br>
+=======
+| Menu Screen | Install AppImage |
+| :---: | :---: |
+| ![Menu](./assets/AppIntegrator_screenshoot_01_Menu.png) | ![Create](./assets/AppIntegrator_screenshoot_02_Create.png) |
+
+<details>
+<summary><b>Click to see more screenshots</b></summary>
+
+#### Mime Icon
+![Mime Icon](./assets/AppIntegrator_screenshoot_03_Mime_Icon.png)
+
+#### About Screen
+![About](./assets/AppIntegrator_screenshoot_04_About.png)
+
+</details>
+
+
+>>>>>>> main-codeberg
 
 ## 💡 Usage
 
@@ -45,6 +73,7 @@ After downloading the AppImage, right-click it and under **Properties -> Permiss
 > [!TIP]
 > To easily find your AppImage apps, I recommend placing them under `/home/youruser/Apps`.
 
+<<<<<<< HEAD
 <br>
 
 ## 📥 Download
@@ -53,6 +82,25 @@ The application binary can be downloaded as an AppImage from the [Releases](http
 The AppImage is automatically built by GitHub Actions using this workflow: [.github/workflows/build-appimage.yml](./.github/workflows/build-appimage.yml).
 
 <br>
+=======
+
+
+## 📥 Download
+
+The application binary can be downloaded as an AppImage from the [Releases](https://codeberg.org/silo0074/AppImageIntegrator/releases) section.
+
+To verify the integrity of the download, run:
+
+```bash
+sha256sum -c AppImageIntegrator-x86_64.AppImage.sha256
+```
+
+Make it executable:
+```bash
+chmod +x AppImageIntegrator-x86_64.AppImage
+```
+
+>>>>>>> main-codeberg
 
 ## 🔨 Compiling
 
@@ -60,14 +108,26 @@ If you prefer to build the AppImage yourself, you can use the provided automatio
 
 1. **Clone the repository**:
    ```bash
+<<<<<<< HEAD
    git clone https://github.com/silo0074/AppImageIntegrator.git
    cd AppImageIntegrator
+=======
+   git clone https://codeberg.org/silo0074/AppImageIntegrator.git
+   cd AppImageIntegrator
+   ```
+>>>>>>> main-codeberg
 
 2. **Run the script**:
    ```bash
    ./build_appimage.sh
+<<<<<<< HEAD
 
 <br>
+=======
+   ```
+
+
+>>>>>>> main-codeberg
 
 ## 📖 How to Use
 
@@ -81,6 +141,7 @@ If you prefer to build the AppImage yourself, you can use the provided automatio
 
 <br>
 
+<<<<<<< HEAD
 ## How does it work
 
 The user can select an AppImage which will be temporarly unpacked to extract the icon and the desktop file. The icon will be copied in `.local/share/icons/` and a .desktop file will be created in `.local/share/applications`. The user can modify the desktop fields such as the application name or pick another icon. The MIME types can be selected using a list of check boxes. These tells the system what file types the application can handle so it can appear in the Open With menu.
@@ -89,6 +150,8 @@ Based on the settings inside the Options section, a desktop file can be created,
 
 <br>
 
+=======
+>>>>>>> main-codeberg
 ## 🛠️ Built With
 
 * **[Python 3.10+](https://www.python.org/)** - The core programming language.
