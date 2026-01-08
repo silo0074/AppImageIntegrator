@@ -1,0 +1,22 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "generate-ui",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-lc",
+        "\"$(dirname ${command:python.interpreterPath})/pyside6-uic\" form.ui -o ui_form.py"
+      ],
+      "options": { "cwd": "${workspaceFolder}/src" },
+      "problemMatcher": [],
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      }
+    }
+  ]
+}
