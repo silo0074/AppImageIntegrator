@@ -5,7 +5,7 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](./LICENSE)
 [![Release](https://img.shields.io/gitea/v/release/silo0074/AppImageIntegrator?gitea_url=https://codeberg.org)](https://codeberg.org/silo0074/AppImageIntegrator/releases)
 
-# AppImage Integrator
+# AppImage Integrator,
 
 **AppImage Integrator** is a lightweight utility designed for Linux users to "install" standalone AppImages into the desktop environment by creating desktop entries and associating MIME types, so your portable applications feel like native system installs.
 
