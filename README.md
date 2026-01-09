@@ -3,7 +3,7 @@
 ![PySide6](https://img.shields.io/badge/Framework-PySide6-blue?logo=qt)
 ![Release](https://img.shields.io/github/v/release/silo0074/AppImageIntegrator)
 
-# AppImage Integrator Github
+# AppImage Integrator
 
 **AppImage Integrator** is a lightweight utility designed for Linux users to "install" standalone AppImages into the desktop environment by creating desktop entries and associating MIME types, so your portable applications feel like native system installs.
 
