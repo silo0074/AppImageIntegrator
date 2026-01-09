@@ -1,5 +1,5 @@
 # git config --local merge.ours.driver true
 
-# README.md merge=ours
+README.md merge=binary
 # .github/** merge=ours
 # .woodpecker/** merge=ours
