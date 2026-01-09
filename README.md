@@ -22,22 +22,22 @@
 
 <br>
 
-## 📸 Screenshots
-
-| Main Interface | App Install |
+| Menu Screen | Install AppImage |
 | :---: | :---: |
-| ![Main UI](./assets/AppIntegrator_screenshoot_01_Menu.png) | ![Create .desktop](./assets/AppIntegrator_screenshoot_02_Create.png) |
-
-<br>
+| ![Menu](./assets/AppIntegrator_screenshoot_01_Menu.png) | ![Create](./assets/AppIntegrator_screenshoot_02_Create.png) |
 
 <details>
-  <summary>🔍 Click to view more screenshots</summary>
-  
-  ![Set MIME icon](./assets/AppIntegrator_screenshoot_03_Mime_Icon.png)
-  ![About page](./assets/AppIntegrator_screenshoot_04_About.png)
+<summary><b>Click to see more screenshots</b></summary>
+
+#### Mime Icon
+![Mime Icon](./assets/AppIntegrator_screenshoot_03_Mime_Icon.png)
+
+#### About Screen
+![About](./assets/AppIntegrator_screenshoot_04_About.png)
+
 </details>
 
-<br>
+
 
 ## 💡 Usage
 
@@ -45,14 +45,23 @@ After downloading the AppImage, right-click it and under **Properties -> Permiss
 > [!TIP]
 > To easily find your AppImage apps, I recommend placing them under `/home/youruser/Apps`.
 
-<br>
 
 ## 📥 Download
 
 The application binary can be downloaded as an AppImage from the [Releases](https://github.com/silo0074/AppImageIntegrator/releases) section.
 The AppImage is automatically built by GitHub Actions using this workflow: [.github/workflows/build-appimage.yml](./.github/workflows/build-appimage.yml).
 
-<br>
+To verify the integrity of the download, run:
+
+```bash
+sha256sum -c AppImageIntegrator-x86_64.AppImage.sha256
+```
+
+Make it executable:
+```bash
+chmod +x AppImageIntegrator-x86_64.AppImage
+```
+
 
 ## 🔨 Compiling
 
